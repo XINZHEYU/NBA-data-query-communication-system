@@ -1,0 +1,73 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+<!--  <h1>Account</h1>
+  <div>{{p_name}}</div>
+  <div>Players:
+    {% for n in data %}
+    <div>{{p_name}}</div>
+    {% endfor %}
+  </div>
+-->
+<!--<form method="POST" action="/add">
+<p>Name of new computer scientist: <input type="text" name="name"> <input type="submit" value="Add"></p>
+</form>-->
+<h1 align="center">Game Information Query</h1>
+<form method="POST" action="/get_game_date">
+<p align="center">Please input the date you want to query: <input type="text" name="date">
+<input type="submit" value="Submit"></p>
+</form>
+
+<!--<form method="POST" action="/get_game_team">
+<p align="center">Please input the team you want to query: <input type="text" name="team">
+<input type="submit" value="Submit"></p>
+</form>
+-->
+<form method = "POST" action="/get_game_team">
+  <p align="center">Please input the team you want to query:<!--<input type="text" name=team">-->
+  <select name="team" >
+  <option value="Mavericks">Mavericks</option>
+  <option value="Rockets">Rockets</option>
+  <option value="Celtics">Celtics</option>
+  <option value="Nets">Nets</option>
+  <option value="Knicks">Knicks</option>
+  <option value="76ers">76ers</option>
+  <option value="Raptors">Raptors</option>
+  <option value="Bulls">Bulls</option>
+  <option value="Cavaliers">Cavaliers</option>
+  <option value="Pistons">Pistons</option>
+  <option value="Pacers">Pacers</option>
+  <option value="Bucks">Bucks</option>
+  <option value="Hornets">Hornets</option>
+  <option value="Magic">Magic</option>
+  <option value="Wizards">Wizards</option>
+  <option value="Grizzlies">Grizzlies</option>
+  <option value="Pelicans">Pelicans</option>
+  <option value="Spurs">Spurs</option>
+  <option value="Nuggets">Nuggets</option>
+  <option value="Timberwolves">Timberwolves</option>
+  <option value="Thunder">Thunder</option>
+  <option value="Trail Blazers">Trail Blazers</option>
+  <option value="Jazz">Jazz</option>
+  <option value="Warriors">Warriors</option>
+  <option value="Clippers">Clippers</option>
+  <option value="Lakers">Lakers</option>
+  <option value="Suns">Suns</option>
+  <option value="Kings">Kings</option>
+  <option value="Hawks">Hawks</option>
+  </select>
+
+  <input type="submit" value="Submit"></p>
+</form>
+
+</body>
+
+
+</html>

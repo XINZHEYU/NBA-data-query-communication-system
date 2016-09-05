@@ -1,0 +1,56 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <h1>Welcome {{user_info.username}}</h1>
+  <div>{{data}}</div>
+
+    <p>Username: {{user_info.username}}</p>
+    <p>Password: ----------</p>
+    <p>e-mail: {{user_info.email}}</p>
+    <p>block: {{user_info.blockflag}}</p>
+    <br>
+  <p>Your Posts</p>
+  <div>
+    <table>
+    <TR>
+        <TD class="c1">content</TD>
+        <TD class="c3">time</TD>
+    </TR>
+
+      {% for item in user_info.posts %}
+      <TR>
+        <TD class="c1">{{item.content}}</TD>
+        <TD class="c3">{{item.time}}</TD>
+      </TR>
+      {% endfor %}
+    </table>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <a href="/account_setup?username={{user_info.username}}">Account Setting</a>
+  <p><a href="/forum?username={{user_info.username}}">Go to forum</a></p>
+  <p><a href="/">Back to Main Page</a></p>
+  <p><a href="/logout?username={{user_info.username}}">Logout</a></p>
+
+<script language = "javascript" type = "text/javascript">
+var url2 = {{user_info.username}};
+var burl = str1.concat(url2);
+var username = "hahaha";
+var url = "/forum/" + username;
+document.getElementById("hahaha").href = url;
+
+</script>
+
+</body>
+
+
+</html>

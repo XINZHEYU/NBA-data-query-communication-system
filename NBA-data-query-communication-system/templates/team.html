@@ -1,0 +1,37 @@
+<html>
+<style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <h1>Team Information</h1>
+  <div>Team Name:{{name}}</div>
+  <div>Team Location:{{location}}</div>
+  <div>Current Players in the team(Recorded in the database):
+  {% for n in player %}
+  <div><a href = "/player/{{n}}">{{n}}</a></div>
+  {% endfor %}
+  </div>
+  <p><img src = {{logo}}, height = "200" width = "200" /></p>
+<!--  <div>
+    {% for n in data %}
+    <div>{{n}}</div>
+    {% endfor %}
+  </div>
+-->
+
+<!--<p><a href="/another">Go to the other page</a></p>
+-->
+<!--<form method="POST" action="/add">
+<p>Name of new computer scientist: <input type="text" name="name"> <input type="submit" value="Add"></p>
+</form>-->
+
+
+
+</body>
+</html>
+

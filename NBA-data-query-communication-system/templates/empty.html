@@ -1,0 +1,41 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body> 
+  <h1>Forum</h1>
+  <div>{{data}}</div>
+
+  <p>Filter</p>
+
+  <form method="POST" action="/forum/filter?username={{dict.posts[0].login_user}}">
+    <p>Content <input type="text" name="content" value="all"></p>
+    <p>Date from<input type="text" name="from" placeholder = "yyyy-mm-dd" value={{dict.minposttime}}> to <input type="text" name="to" value={{dict.maxposttime}} placeholder = "yyyy-mm-dd"></p>
+   <p><input type="submit" value="Submit"></p>
+  </form>
+
+  <br>
+  <br>
+  <p>No matching result</p>
+
+  <br>
+  <br>
+ <!-- <textarea form = "postsend" rows="4" cols="50" name="post" form="usrform">
+  Send post here...</textarea>-->
+
+  <form method="POST" id = "postsend" action="/send?poster={{dict.posts[0].login_user}}">
+ <!-- <p>your username: <input type="text" name="username"></p>-->
+  <textarea rows="4" cols="50" name="post" placeholder = "Send post here..."></textarea>
+  <br>
+  <p><input type="submit" value="send"></p>
+  </form>
+
+  <p><a href="/userpage?username={{dict.posts[0].login_user}}">Back to User Homepage</a></p>
+  <p><a href="/">Logout</a></p>
+</body>
+</html>

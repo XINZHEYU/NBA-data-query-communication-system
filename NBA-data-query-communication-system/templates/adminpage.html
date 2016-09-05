@@ -1,0 +1,20 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <h1>Welcome {{admin_info.username}}!</h1>
+  <p><a href="/modifypage?username={{admin_info.username}}">Modify NBA Data</a></p>
+  <p><a href="/forummanage?username={{admin_info.username}}">NBA Forum Management</a></p>
+  <p><a href="/userlist?username={{admin_info.username}}">User List</a></p>
+  <br>
+  <p><a href="/">Back to mainpage</a></p>
+</body>
+
+
+</html>

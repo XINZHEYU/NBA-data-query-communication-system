@@ -1,0 +1,52 @@
+<html>
+<script type="text/javascript" language="javascript">
+function resizeFrame(){
+var vW=document.getElementById("right").offsetWidth;
+var x=(parseInt(document.documentElement.clientWidth)-vW);
+document.getElementById("right").setAttribute("style", "margin-left:"+x+"px;");
+}
+window.onresize=resizeFrame;
+window.onload=resizeFrame;
+</script>  
+<style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <div><h1 align = "center">Welcome to the NBA query and communication Webpage</h1></div>
+  <br>
+  <TR>
+  <TD>
+  <p align = "center"><a href="/dataquery">NBA Data Query</a>
+  <a href="/index?name=user">NBA Forum</a>
+  <a href="/index?name=admin">Administrator Login</a></p></TD>
+  <TD><div id="right" style="position:absolute;"><img src = "http://blog.fidmdigitalarts.com/wp-content/uploads/2011/04/nba-logo.jpg", height = "200" width = "200"></div></TD>
+
+  </TR>
+  <p align = "center"><img src = "https://londonolympic2012blog.files.wordpress.com/2012/11/nba-teams-list-of-nba-teams-national-basketball-association.gif"></p>
+  <!--<div>
+    {% for n in data %}
+    <div>Welcome to the NBA query and communication Webpage, {{n}} !</div>
+    {% endfor %}
+  </div>-->
+
+<!--<p><a href="/another">Go to the other page</a></p>
+-->
+<!--<form method="POST" action="/add">
+<p>Name of new computer scientist: <input type="text" name="name"> <input type="submit" value="Add"></p>
+</form>-->
+
+<!--<form method="POST" action="/login">
+<p>username: <input type="text" name="username"> 
+password: <input type="text" name="password">
+<input type="submit" value="Add"></p>
+</form>-->
+
+</body>
+
+
+</html>

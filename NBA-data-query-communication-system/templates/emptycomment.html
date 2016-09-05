@@ -1,0 +1,33 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <h1>Comment</h1>
+
+  <p>Post Content</p>
+  <p>{{dict.comment[0].post}}</p>
+
+  <br>
+  <br>
+  <p>No comment</p>
+
+  <br>
+  <br>
+
+ <form method="POST" id = "postsend" action="/sendcomment?poster={{dict.comment[0].login_user}}post={{dict.comment[0].post}}"?>
+  <textarea rows="4" cols="50" name="comment" placeholder = "Send comment here..."></textarea>
+  <br>
+  <p><input type="submit" value="send"></p>
+  </form>
+
+  <p><a href="/forum/filter?username={{dict.comment[0].login_user}}">Back to Forum</a></p>
+  <p><a href="/userpage?username={{dict.comment[0].login_user}}">Back to User Homepage</a></p>
+  <p><a href="/logout?username={{dict.comment[0].login_user}}">Logout</a></p>
+</body>
+</html>

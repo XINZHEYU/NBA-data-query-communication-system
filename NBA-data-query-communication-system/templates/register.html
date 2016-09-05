@@ -1,0 +1,40 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <h1>Register</h1>
+<br>
+<br>
+<br>
+<p>User Register</p>
+<form method="POST" action="/userpage?username=user">
+<p>username: <input type="text" name="username"></p>
+<p>password: <input type="password" name="password"></p>
+<p>email: <input type = "text" name = "email"></p>
+<p><input type="submit" value="Register"></p>
+</form>
+<br>
+<br>
+<p>Administrator Register</p>
+<form method="POST" action="/adminpage?username=admin">
+<p>username: <input type="text" name="adminname"></p>
+<p>password: <input type="password" name="adminpassword"></p>
+<p><input type="submit" value="Register"></p>
+</form>
+
+<script>
+
+var user = document.getElementByName(username);
+
+</script>
+
+</body>
+
+
+</html>

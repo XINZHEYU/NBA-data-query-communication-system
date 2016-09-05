@@ -1,0 +1,29 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <h1>Modify Data</h1>
+  <div>{{data}}</div>
+
+<form method="POST" action="/modifydata?username={{dict.username}}">
+<p>Date: <input type="text" placeholder = "yyyy-mm-dd" name="date">
+Location: <input type="text" placeholder = "please use capital"name="host"></p>
+<p>Host Score:  <input type="text" name="hostscore"></p>
+<p>Guest Score:  <input type="text" name="guestscore"></p>
+<input type="submit" value="Update"></p>
+</form>
+
+<br>
+<br>
+<p><a href="/adminpage?username={{dict.username}}">Back to adminpage</a></p>
+
+</body>
+
+
+</html>

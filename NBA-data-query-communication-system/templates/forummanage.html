@@ -1,0 +1,37 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+  <h1>Forum Management</h1>
+
+<table>
+  <TR>
+    <TD class="c1">Content</TD>
+    <TD class="c2">User</TD>
+    <TD class="c3">Time</TD>
+    <TD class="c4">Action</TD>
+  </TR>
+  <br>
+
+    {% for item in dict.post %}
+  <TR>
+    <TD class="c1">{{item.content}}</TD>
+    <TD class="c2">{{item.username}}</TD>
+    <TD class="c3">{{item.time}}</TD>
+    <TD class="c4"><a href="/deletepost?content={{item.content}}&adminname={{dict.adminname}}">Delete</a></TD>
+  </TR>
+    {% endfor %}
+  </table>
+
+  <p><a href="/adminpage?username={{dict.adminname}}">Back to adminpage</a>
+
+</body>
+
+
+</html>
